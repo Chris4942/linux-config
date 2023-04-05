@@ -1,0 +1,7 @@
+[user]
+	email = cjwest4942@gmail.com name = Chris West
+[alias]
+	log1 = log --oneline
+	log1g = log1 --graph
+[core]
+	editor = vim
