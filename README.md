@@ -1,3 +1,10 @@
+# Cloning
+
+To clone to a `<given directory>`, run
+```sh
+git clone <url> <given directory>
+```
+
 # CWEST configurations
 
 This repository contains various configuration files.
