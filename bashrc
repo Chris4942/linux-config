@@ -10,7 +10,7 @@ fi
 alias g="git"
 __git_complete g __git_main
 alias n="nvim ."
-alias sudop='suod -E env "PATH=$PATH"'
+alias sudop='sudo -E env "PATH=$PATH"'
 
 export PATH="$HOME/bin:$PATH"
 

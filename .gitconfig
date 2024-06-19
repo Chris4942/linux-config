@@ -34,16 +34,16 @@
     cp        = "cherry-pick"
     clf       = "clean -f"
     # git extension commands:
-    # These commands are based on git commands, but ha names unrelated to the underlying commands
+    # These commands are based on git commands, but have names unrelated to the underlying commands
     add-non-whitespace-changes  = "!git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
     anw                         = "add-non-whitespace-changes"
     root                        = "rev-parse --show-toplevel"
     current-commit              = "rev-parse @"
-    curc                        = "current-commit | tr -d '\n'"
-    curcp                       = "curc | xsel --clipboard"
+    curc                        = "!git current-commit | tr -d '\n'"
+    curcp                       = "!git curc | xsel --clipboard"
     current-branch              = "rev-parse --abbrev-ref @"
-    curb                        = "current-branch | tr -d '\n'"
-    curbp                       = "curb | xsel --clipboard"
+    curb                        = "!git current-branch | tr -d '\n'"
+    curbp                       = "!git curb | xsel --clipboard"
     uncommit                    = "reset --soft @~"
     fire                        = "!git add .; git commit -m 'emergency save'; gitpush"
     jump-to-origin              = "!export CWEST_CURR_BRANCH=$(git rev-parse --abbrev-ref @); echo \"forcefully moving $CWEST_CURR_BRANCH to origin/$CWEST_CURR_BRANCH. If you need to get back to this commit, you can use git reflog or the git hash that is printed below\"; git fetch origin; git checkout @; git branch --force $CWEST_CURR_BRANCH origin/$CWEST_CURR_BRANCH; git checkout $CWEST_CURR_BRANCH"
